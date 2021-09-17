@@ -1,0 +1,42 @@
+@import "./variables";
+@import "./mixins";
+
+.wrapper {
+  font-family: $main_font;
+}
+.header {
+  @include container(1170px, 0 auto);
+  display: flex;
+  justify-content: space-between;
+  height: 93px;
+  align-items: center;
+
+  &__nav {
+    li {
+      list-style-type: none;
+      display: inline;
+
+      & + li {
+        margin-left: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $font_color_dark;
+        padding: 10px 15px;
+        font-size: $main_font_size_13;
+
+        &:hover {
+          background-color: $yellow_color;
+          border-radius: 2px;
+        }
+      }
+    }
+    @media screen and (max-width: 980px) {
+      //   display: ;
+      li {
+        display: block;
+      }
+    }
+  }
+}
